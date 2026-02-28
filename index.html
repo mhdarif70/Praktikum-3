@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Minggu Ke-3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <nav class="navbar">
+    <div class="navbar__logo">
+      <span class="logo-icon">&#9670;</span>
+      <span class="logo-text">Portofilio <span style="color: rgb(0, 132, 255);"">Arif</span></span>
+    </div>
+
+    <ul class="navbar__links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="navbar__cta">
+      <a href="https://wa.me/6282166917331" class="btn-primary" target="_blank">
+  Hire Me on WhatsApp
+</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO SECTION ────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero__content">
+      <span class="hero__badge">Available for Work</span>
+      <h1 class="hero__title">
+        Hi, saya <span class="highlight">Muhammad Arif</span><br>
+        Web Developer
+      </h1>
+      <p class="hero__desc">
+        Saya membangun website yang cepat, responsif, dan tampak profesional.
+        Mari buat sesuatu yang luar biasa bersama.
+      </p>
+      <div class="hero__actions">
+        <a href="S_20240515_093518_0000.pdf.pdf"  download="CV-Arif-WebDeveloper.pdf" class="btn-primary">Download CV</a>
+        <a href="#contact" class="btn-outline">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+<!-- ── SKILLS SECTION ──────────────── -->
+  <section class="skills" id="about">
+    <div class="container">
+      <h2 class="section-title">Keahlian Saya</h2>
+      <p class="section-subtitle">Teknologi yang saya kuasai</p>
+
+      <div class="skills__grid">
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128195;</div>
+          <h3>HTML5</h3>
+          <p>Semantic markup, aksesibilitas, dan struktur dokumen yang baik.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#127912;</div>
+          <h3>CSS3</h3>
+          <p>Flexbox, Grid, animasi, dan responsive design untuk semua layar.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#9889;</div>
+          <h3>JavaScript</h3>
+          <p>DOM manipulation, Fetch API, dan logika interaktif modern.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128279;</div>
+          <h3>Git & GitHub</h3>
+          <p>Version control, branching, dan kolaborasi tim secara profesional.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#9881;</div>
+          <h3>React</h3>
+          <p>Component-based development dengan hooks dan state management.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128640;</div>
+          <h3>Performance</h3>
+          <p>Optimasi loading, image compression, dan Core Web Vitals.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO SECTION ───────────────── -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <h2 class="section-title">Portfolio</h2>
+    <p class="section-subtitle">Beberapa proyek yang sudah saya kerjakan</p>
+
+    <div class="portfolio__grid">
+
+      <div class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="assets/img/Screenshot 2026-02-28 154815.png" alt="Project 1">
+        </div>
+        <div class="portfolio-card__content">
+          <h3>Website Company Profile</h3>
+          <p>Website modern dan responsif untuk perusahaan startup.</p>
+          <a href="#" class="btn-outline"><span style="color: black;">Lihat Detail</span></a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="assets/img/Screenshot 2026-02-28 155025.png" alt="Project 2">
+        </div>
+        <div class="portfolio-card__content">
+          <h3>Landing Page Produk</h3>
+          <p>Membuat halaman hotel dimana memiliki fungsi booking dan manajemen kamar.</p>
+          <a href="#" class="btn-outline"><span style="color: black;">Lihat Detail</span></a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="assets/img/Screenshot 2026-02-28 155549.png" alt="Project 3">
+        </div>
+        <div class="portfolio-card__content">
+          <h3>Dashboard Admin</h3>
+          <p>Dashboard interaktif untuk memantau pekermbangan penyetoran sampah menggunakan JavaScript dan chart.</p>
+          <a href="#" class="btn-outline"><span style="color: black;">Lihat Detail</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Hubungi Saya</h2>
+    <p class="section-subtitle">Silakan kirim pesan jika ingin bekerja sama</p>
+
+    <div class="contact__wrapper">
+      <form  method="POST" class="contact__form">
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+
+        <div class="contact__form-group">
+            <label>Nama</label>
+            <input type="text" name="nama" required placeholder="Masukkan nama Anda">
+        </div>
+
+        <div class="contact__form-group">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="Masukkan email Anda">
+        </div>
+
+        <div class="contact__form-group">
+            <label>Pesan</label>
+            <textarea name="pesan" required placeholder="Tulis pesan Anda..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Kirim Pesan</button>
+
+     </form>
+    </div>
+  </div>
+</section>
+
+  <!-- ── FOOTER ──────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__brand">&#9670; Portofilio <span style="color: rgb(0, 132, 255);"">Arif</span></span>
+        <p class="footer__copy">
+          &copy; 2025 Nama Kamu. Dibuat dengan HTML & CSS murni.
+        </p>
+        <div class="footer__links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

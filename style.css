@@ -1,0 +1,463 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #ffffff;
+  padding-top: 64px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.navbar {
+  background-color: #0505dd;
+  padding: 0 32px;
+  height: 64px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.logo-icon {
+  color: rgb(0, 132, 255);
+  font-size: 1.5rem;
+}
+
+/* Menu Links */
+.navbar__links {
+  display: flex;          /* list item jadi horizontal */
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar__links a {
+  color: #cccccc;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.navbar__links a:hover {
+  color: #ffffff;
+}
+
+/* Tombol CTA */
+.btn-primary {
+  background-color: rgb(0, 132, 255);
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: rgb(5, 105, 199);
+}
+.hero {
+  min-height: calc(100vh - 64px); /* full tinggi layar dikurangi navbar */
+  background: linear-gradient(135deg, #0f0c29, #1b3c73, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+}
+
+.hero__content {
+  max-width: 640px;
+  text-align: center;
+}
+
+.hero__badge {
+  display: inline-block;
+  background-color: rgba(10, 0, 205, 0.2);
+  color: #a29bfe;
+  border: 1px solid #6c63ff;
+  padding: 4px 16px;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: rgb(38, 150, 255)
+}
+
+.hero__desc {
+  color: #b0b0cc;
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  border: 2px solid rgb(0, 132, 255);
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: rgb(0, 132, 255);
+  color: #ffffff;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── SKILLS SECTION ─────────────────────────── */
+.skills {
+  padding: 96px 0;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666666;
+  margin-bottom: 56px;
+}
+
+/* ── CSS GRID: 3 kolom ──────────────────────── */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── SKILL CARD ─────────────────────────────── */
+.skill-card {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 32px 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px rgba(0, 191, 255, 0.3);
+}
+
+.skill-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.skill-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.skill-card p {
+  color: #666666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+@media (max-width: 1023px) {
+
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 kolom -> 2 kolom */
+  }
+
+  .hero__title {
+    font-size: 2.4rem;
+  }
+}
+
+/* ── MOBILE (max 767px) ─────────────────────── */
+@media (max-width: 767px) {
+
+  /* Navbar: sembunyikan menu, tampilkan hamburger (sederhana) */
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar__links {
+    display: none; /* sembunyikan menu di mobile */
+  }
+
+  /* Hero: font lebih kecil */
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__desc {
+    font-size: 1rem;
+  }
+
+  /* Skills: 1 kolom di mobile */
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Container: padding lebih kecil */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Skills section: padding lebih kecil */
+  .skills {
+    padding: 64px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ── FOOTER ─────────────────────────────────── */
+.footer {
+  background-color: #0303b2;
+  padding: 32px 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__brand {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.footer__copy {
+  color: #888888;
+  font-size: 0.85rem;
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__links a {
+  color: #888888;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* contact */
+/* ── CONTACT SECTION ─────────────────────────── */
+.contact {
+  padding: 96px 0;
+  background-color: #ffffff;
+}
+
+.contact .section-title {
+  margin-bottom: 12px;
+}
+
+.contact .section-subtitle {
+  margin-bottom: 56px;
+}
+
+.contact__wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  padding: 48px 32px;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact__form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+.contact__form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Tombol kirim full width */
+.contact__form .btn-primary {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .contact {
+    padding: 64px 0;
+  }
+
+  .contact__wrapper {
+    padding: 32px 20px;
+  }
+}
+
+/* ── PORTFOLIO SECTION ───────────────────── */
+.portfolio {
+  padding: 96px 0;
+  background-color: #ffffff;
+}
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.portfolio-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 191, 255, 0.3);
+}
+
+.portfolio-card__image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.portfolio-card__content {
+  padding: 24px;
+}
+
+.portfolio-card__content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.portfolio-card__content p {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio {
+    padding: 64px 0;
+  }
+
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+  }
+}
